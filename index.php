@@ -3,11 +3,12 @@ require_once "config.php";
 $sql = "SELECT * FROM users";
 $result = $link->query($sql);
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>NG NAKO</title>
+    <title>USER DETAILS</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <style>
@@ -24,7 +25,6 @@ $result = $link->query($sql);
                 <div class="card" style="margin-top: 20px;margin-bottom: 20px;">
                     <div class="card-body">
                         <h2 class="pull-left">User Details <a href="create.php" class="btn btn-success pull-right">Add New User</a></h2>
-                        <h6>Find more interesting tutorials at <a href="https://bishrulhaq.com/">bishrulhaq.com</a></h6>
                     </div>
                 </div>
                 <?php
