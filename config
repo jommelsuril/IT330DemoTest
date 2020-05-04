@@ -1,22 +1,11 @@
 <?php
-/*
-// mysql_connect("database-host", "username", "password")
-$conn = mysql_connect("localhost","root","root") 
-			or die("cannot connected");
-// mysql_select_db("database-name", "connection-link-identifier")
-@mysql_select_db("test",$conn);
-*/
-
-/**
- * mysql_connect is deprecated
- * using mysqli_connect instead
- */
-
-$databaseHost = '420server.mysql.database.azure.com';
-$databaseName = 'botoy';
-$databaseUsername = 'JomSur@420server';
-$databasePassword = 'MrDop33098';
-
-$mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName); 
- 
-?>
+	define('DB_SERVER', '420server.mysql.database.azure.com');
+	define('DB_USERNAME', 'JomSur@420server');
+	define('DB_PASSWORD', 'MrDop33098');
+	define('DB_NAME', 'crud');
+	
+	$link = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+	if ($link->connect_errno) {
+	    printf("Connect failed: %s\n", $link->connect_error);
+	exit();
+}
