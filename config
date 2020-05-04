@@ -1,21 +1,7 @@
 <?php
 
-	$servername = "420server.mysql.database.azure.com";
-	$username  = "JomSur@420server";
-	$password = "MrDop33098";
-	$dbname = "BOTOY";
-
-      // Create connection
-      $conn = mysqli_connect($servername, $username, $password, $dbname);
-      // Check connection
-      if (!$conn) {
-          die("Connection failed: " . mysqli_connect_error());
-      } 
-
-      else {
-          echo "0 results";
-      }
-
-      mysqli_close($conn);
+	$con=mysqli_init(); 
+	mysqli_ssl_set($con, NULL, NULL, {ca-cert filename}, NULL, NULL);
+	mysqli_real_connect($con, "420server.mysql.database.azure.com", "JomSur@420server", {MrDop33098}, {BOTOY}, 3306);
 ?>
 
