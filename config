@@ -1,13 +1,21 @@
 <?php
-      define('DB_SERVER', '420server.mysql.database.azure.com');
-      define('DB_USERNAME', 'JomSur@420server');
-      define('DB_PASSWORD', 'MrDop33098');
-      define('DB_NAME', 'BOTOY');
-      
-      $link = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
-      
-      if ($link->connect_errno) {
-          printf("Connect failed: %s\n", $link->connect_error);
-      exit();
-}
+
+	$servername = "420server.mysql.database.azure.com";
+	$username  = "JomSur@420server";
+	$password = "MrDop33098";
+	$dbname = "BOTOY";
+
+      // Create connection
+      $conn = mysqli_connect($servername, $username, $password, $dbname);
+      // Check connection
+      if (!$conn) {
+          die("Connection failed: " . mysqli_connect_error());
+      } 
+
+      else {
+          echo "0 results";
+      }
+
+      mysqli_close($conn);
+?>
 
