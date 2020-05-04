@@ -10,4 +10,4 @@
           printf("Connect failed: %s\n", $link->connect_error);
       exit();
 }
-?>
+
